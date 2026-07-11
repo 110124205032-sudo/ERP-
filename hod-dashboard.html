@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOD Dashboard - EduTech Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <h3>EduTech</h3>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="nav-item active" data-target="overview-section">
+                        <i class="fa-solid fa-address-card"></i>
+                        <span>Dashboard & Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" data-target="timetable-section">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Timetable Hub</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" data-target="teachers-section">
+                        <i class="fa-solid fa-folder-tree"></i>
+                        <span>Teacher Directory</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" data-target="faculty-attendance-section">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Faculty Attendance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" data-target="notice-section">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <span>Notice Board</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="topbar" style="display: flex; justify-content: space-between; align-items: center;">
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+                <h1 style="font-size: 18px; margin: 0 auto; color: var(--text-main);">HOD Dashboard</h1>
+                <div class="notification-icon" style="font-size: 20px; color: var(--text-muted); cursor: pointer;">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+            </div>
+            
+            <!-- SECTION: Overview -->
+            <div id="overview-section" class="content-section active">
+                <!-- Greeting Section -->
+                <div class="greeting-section" style="margin-bottom: 24px;">
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 4px;">👋 Good Morning,</p>
+                    <h2 style="font-size: 28px; color: var(--text-main); font-weight: 700;">Dr. John Smith</h2>
+                </div>
+                
+                <!-- Profile Banner -->
+                <div class="robust-profile-card">
+                    <div class="robust-photo">
+                        <img src="https://i.pravatar.cc/300?img=68" alt="Dr. John Smith" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    
+                    <div class="robust-details">
+                        <div class="robust-row-1">
+                            <h2 class="robust-name" title="Dr. John Smith">Dr. John Smith</h2>
+                            <div class="robust-att-badge">
+                                Active HOD
+                            </div>
+                        </div>
+                        <div class="robust-row-2">
+                            <span style="font-weight: 400; color: var(--text-muted);">Department:</span> <strong>Computer Science</strong>
+                        </div>
+                        <div class="robust-row-3" style="margin-top: 6px;">
+                            <span style="font-weight: 400; color: var(--text-muted);">Specialization:</span> <strong>Artificial Intelligence</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="timetable-card">
+                        <div class="card-header">
+                            <h3>Department Stats</h3>
+                            <span class="date">Today</span>
+                        </div>
+                        
+                        <div class="timeline" style="padding: 16px;">
+                            <div class="stat-card-clickable" data-modal-target="facultyPresentModal" style="background: var(--bg-main); padding: 16px; border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border-color);">
+                                <h4 style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">Total Teachers Present Today</h4>
+                                <span style="color: #22c55e; font-size: 24px; font-weight: 700;">42 / 45</span>
+                            </div>
+                            <div class="stat-card-clickable" data-modal-target="studentsPresentModal" style="background: var(--bg-main); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
+                                <h4 style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">Total Students Present Today</h4>
+                                <span style="color: #22c55e; font-size: 24px; font-weight: 700;">180 / 200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notice-board-card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        
+                        <div class="notice-list">
+                            <div class="notice-item" style="cursor: pointer;" data-modal-target="noticeModal">
+                                <div class="date-badge" style="background: #e0eafc; color: #008080;">
+                                    <i class="fa-solid fa-bullhorn" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Publish a Notice</h4>
+                                    <p>Broadcast announcements to all teachers and students in the department.</p>
+                                </div>
+                            </div>
+                            <div class="notice-item" style="cursor: pointer;" data-modal-target="addTeacherModal">
+                                <div class="date-badge" style="background: #dcfce7; color: #166534;">
+                                    <i class="fa-solid fa-user-plus" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Add New Teacher</h4>
+                                    <p>Onboard a new faculty member to the system.</p>
+                                </div>
+                            </div>
+                            <div class="notice-item" style="cursor: pointer;" data-modal-target="addStudentModal">
+                                <div class="date-badge" style="background: #fef9c3; color: #854d0e;">
+                                    <i class="fa-solid fa-user-graduate" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Enroll New Student</h4>
+                                    <p>Register a new student into the department.</p>
+                                </div>
+                            </div>
+                            <div class="notice-item" style="cursor: pointer;" data-modal-target="deptReportModal">
+                                <div class="date-badge" style="background: #dcfce7; color: #166534;">
+                                    <i class="fa-solid fa-file-invoice" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Generate Department Report</h4>
+                                    <p>Export overall performance, attendance, and metrics.</p>
+                                </div>
+                            </div>
+                            <div class="notice-item" style="cursor: pointer;" data-modal-target="assignTeacherModal">
+                                <div class="date-badge" style="background: #e0eafc; color: var(--primary);">
+                                    <i class="fa-solid fa-chalkboard-user" style="font-size: 24px;"></i>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Assign Teacher to Class</h4>
+                                    <p>Link a faculty member to a specific subject/class.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: Timetable Hub -->
+            <div id="timetable-section" class="content-section">
+                <div class="timetable-hub-section">
+                    <div class="section-header">
+                        <h3>Timetable Hub Overview</h3>
+                        <p>Manage class schedules across the department</p>
+                    </div>
+                    
+                    <div class="class-sections-grid">
+                        <div class="class-card">
+                            <div class="class-card-icon existing">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div class="class-card-details">
+                                <h4>Year 1 A</h4>
+                                <p>Data Structures & Algo</p>
+                            </div>
+                            <button class="btn btn-outline">Edit Timetable</button>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="class-card-icon existing">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div class="class-card-details">
+                                <h4>Year 2 C</h4>
+                                <p>Computer Networks</p>
+                            </div>
+                            <button class="btn btn-outline">Edit Timetable</button>
+                        </div>
+
+                        <div class="class-card warning">
+                            <div class="class-card-icon missing">
+                                <i class="fa-solid fa-calendar-xmark"></i>
+                            </div>
+                            <div class="class-card-details">
+                                <h4>Year 3 B</h4>
+                                <p class="text-danger">No Timetable</p>
+                            </div>
+                            <button class="btn btn-primary">Create Timetable</button>
+                        </div>
+                        
+                        <div class="class-card warning">
+                            <div class="class-card-icon missing">
+                                <i class="fa-solid fa-calendar-xmark"></i>
+                            </div>
+                            <div class="class-card-details">
+                                <h4>Year 4 A</h4>
+                                <p class="text-danger">No Timetable</p>
+                            </div>
+                            <button class="btn btn-primary">Create Timetable</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: Teacher Directory -->
+            <div id="teachers-section" class="content-section">
+                <div class="table-container">
+                    <div class="card-header" style="padding: 24px; padding-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Department Faculty</h3>
+                        <button class="btn btn-primary" data-modal-target="addTeacherModal" style="width: auto;">+ Add Teacher</button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Faculty ID</th>
+                                <th>Name</th>
+                                <th>Specialization</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>T-8204</td>
+                                <td>Dr. Sarah Jenkins</td>
+                                <td>Data Science & AI</td>
+                                <td>s.jenkins@edutech.edu</td>
+                            </tr>
+                            <tr>
+                                <td>T-8205</td>
+                                <td>Prof. John Smith</td>
+                                <td>Software Engineering</td>
+                                <td>j.smith@edutech.edu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION: Faculty Attendance -->
+            <div id="faculty-attendance-section" class="content-section">
+                <div class="table-container">
+                    <div class="card-header" style="padding: 24px; padding-bottom: 16px; display: flex; justify-content: space-between;">
+                        <h3>Today's Faculty Attendance</h3>
+                        <input type="date" class="form-input" style="width: auto;" value="2024-10-24">
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Faculty ID</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>T-8204</td>
+                                <td>Dr. Sarah Jenkins</td>
+                                <td><span class="status-badge status-present">Present</span></td>
+                                <td>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 12px;">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>T-8205</td>
+                                <td>Prof. John Smith</td>
+                                <td><span class="status-badge status-absent">Absent (Leave)</span></td>
+                                <td>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 12px;">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION: Notice Board -->
+            <div id="notice-section" class="content-section">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <h3>Department Notices</h3>
+                    <button class="btn btn-primary" data-modal-target="noticeModal" style="width: auto;">Publish New Notice</button>
+                </div>
+                <div class="notice-board-card">
+                    <div class="notice-list">
+                        <div class="notice-item">
+                            <div class="date-badge">
+                                <span class="month">Oct</span>
+                                <span class="day">24</span>
+                            </div>
+                            <div class="notice-content">
+                                <h4>Mid-Semester Examination Schedule Released</h4>
+                                <p>The timetable for the upcoming mid-semester examinations for B.Tech students has been published. Please check the examination portal.</p>
+                            </div>
+                        </div>
+                        <div class="notice-item">
+                            <div class="date-badge">
+                                <span class="month">Oct</span>
+                                <span class="day">22</span>
+                            </div>
+                            <div class="notice-content">
+                                <h4>Tech Symposium 2024 - Call for Papers</h4>
+                                <p>Submit your research papers for the annual Computer Science symposium by November 5th.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Publish Notice Modal -->
+    <div class="modal-overlay" id="noticeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Publish a Notice</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Notice Title</label>
+                        <input type="text" class="form-input" placeholder="e.g. Holiday Announcement" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Audience</label>
+                        <select class="form-select">
+                            <option>All Students & Teachers</option>
+                            <option>Teachers Only</option>
+                            <option>Students Only</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message Content</label>
+                        <textarea class="form-textarea" placeholder="Write your announcement here..." required></textarea>
+                    </div>
+                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
+                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Publish</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Teacher Modal -->
+    <div class="modal-overlay" id="addTeacherModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Teacher</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-input" placeholder="e.g. Dr. John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-input" placeholder="e.g. john.doe@edutech.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Specialization</label>
+                        <input type="text" class="form-input" placeholder="e.g. Machine Learning" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Assign Temporary Password</label>
+                        <input type="text" class="form-input" value="Welcome123!" required>
+                    </div>
+                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
+                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Teacher</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Student Modal -->
+    <div class="modal-overlay" id="addStudentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Enroll New Student</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-input" placeholder="e.g. Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-input" placeholder="e.g. jane.smith@edutech.edu" required>
+                    </div>
+                    <div class="form-group" style="display: flex; gap: 16px;">
+                        <div style="flex: 1;">
+                            <label>Year</label>
+                            <select class="form-select">
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Section</label>
+                            <select class="form-select">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
+                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Enroll Student</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generate Department Report Modal -->
+    <div class="modal-overlay" id="deptReportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Generate Department Report</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Report Type</label>
+                        <select class="form-select">
+                            <option>Overall Attendance (All Classes)</option>
+                            <option>Academic Performance summary</option>
+                            <option>Faculty Leave/Attendance Report</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Semester / Term</label>
+                        <select class="form-select">
+                            <option>Fall 2024</option>
+                            <option>Spring 2024</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Format</label>
+                        <select class="form-select">
+                            <option>PDF Document (.pdf)</option>
+                            <option>Excel Spreadsheet (.csv)</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
+                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Generate & Download</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assign Teacher Modal -->
+    <div class="modal-overlay" id="assignTeacherModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Assign Teacher to Class</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Select Teacher</label>
+                        <select class="form-select">
+                            <option>Dr. Sarah Jenkins (T-8204)</option>
+                            <option>Prof. John Smith (T-8205)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Subject</label>
+                        <select class="form-select">
+                            <option>Machine Learning (CS401)</option>
+                            <option>Data Structures (CS301)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Class/Section</label>
+                        <select class="form-select">
+                            <option>Year 3 Section A</option>
+                            <option>Year 2 Section C</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
+                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Assign Teacher</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Students Present Modal -->
+    <div class="modal-overlay" id="studentsPresentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Student Attendance Overview</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
+                <div class="attendance-list-section">
+                    <h4 class="present-header"><i class="fa-solid fa-check-circle"></i> Present Students</h4>
+                    <ul class="attendance-list" id="presentStudentsList">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+                <div class="attendance-list-section">
+                    <h4 class="absent-header"><i class="fa-solid fa-times-circle"></i> Absent Students</h4>
+                    <ul class="attendance-list" id="absentStudentsList">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Faculty Present Modal -->
+    <div class="modal-overlay" id="facultyPresentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Faculty Attendance Overview</h3>
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
+                <div class="attendance-list-section">
+                    <h4 class="present-header"><i class="fa-solid fa-check-circle"></i> Present Faculty</h4>
+                    <ul class="attendance-list" id="presentFacultyList">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+                <div class="attendance-list-section">
+                    <h4 class="absent-header"><i class="fa-solid fa-times-circle"></i> Absent Faculty</h4>
+                    <ul class="attendance-list" id="absentFacultyList">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
