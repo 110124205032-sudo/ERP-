@@ -238,6 +238,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Teacher Dashboard Specific Logic ---
+    // Handle Proceed to Mark Attendance button click
+    window.proceedToMarkAttendance = function() {
+        const classSelect = document.getElementById('attendance-class-select');
+        const dateSelect = document.getElementById('attendance-date-select');
+        
+        if (!classSelect || !classSelect.value) {
+            alert('Please select a class first.');
+            return;
+        }
+        
+        document.getElementById('attendance-table-title').innerText = `Mark Attendance: ${classSelect.value}`;
+        
+        if(dateSelect && dateSelect.value) {
+            // Format date string nicely if needed, or just display value
+            const dateObj = new Date(dateSelect.value);
+            const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            document.getElementById('attendance-date-display').innerText = formattedDate;
+        }
+        
+        // Hide Step 1, Show Step 2
+        document.getElementById('attendance-select-step').style.display = 'none';
+        document.getElementById('attendance-mark-step').style.display = 'block';
+    };
+
+    // Handle Change Class button click
+    window.backToAttendanceSelect = function() {
+        // Hide Step 2, Show Step 1
+        document.getElementById('attendance-mark-step').style.display = 'none';
+        document.getElementById('attendance-select-step').style.display = 'block';
+    };
     const facultyPresentModal = document.getElementById('facultyPresentModal');
     if (facultyPresentModal) {
         const facultyAttendanceData = [

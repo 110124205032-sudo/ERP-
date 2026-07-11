@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
@@ -73,13 +75,14 @@
                     <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 4px;">👋 Good Morning,</p>
                     <h2 style="font-size: 28px; color: var(--text-main); font-weight: 700;">Dr. Mohammed Suhail</h2>
                 </div>
-                
+
                 <!-- Profile Banner -->
                 <div class="robust-profile-card">
                     <div class="robust-photo">
-                        <img src="https://i.pravatar.cc/300?img=11" alt="Dr. Mohammed Suhail" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://i.pravatar.cc/300?img=11" alt="Dr. Mohammed Suhail"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    
+
                     <div class="robust-details">
                         <div class="robust-row-1">
                             <h2 class="robust-name" title="Dr. Mohammed Suhail">Dr. Mohammed Suhail</h2>
@@ -88,35 +91,41 @@
                             </div>
                         </div>
                         <div class="robust-row-2">
-                            <span style="font-weight: 400; color: var(--text-muted);">Faculty ID:</span> <strong>FAC-1024</strong>
+                            <span style="font-weight: 400; color: var(--text-muted);">Faculty ID:</span>
+                            <strong>FAC-1024</strong>
                         </div>
                         <div class="robust-row-3">
-                            <span style="font-weight: 400; color: var(--text-muted);">Department:</span> <strong>CSE</strong>
+                            <span style="font-weight: 400; color: var(--text-muted);">Department:</span>
+                            <strong>CSE</strong>
                         </div>
                         <div class="robust-row-3" style="margin-top: 6px;">
-                            <span style="font-weight: 400; color: var(--text-muted);">Specialization:</span> <strong>Artificial Intelligence</strong>
+                            <span style="font-weight: 400; color: var(--text-muted);">Specialization:</span>
+                            <strong>Artificial Intelligence</strong>
                         </div>
                     </div>
                 </div>
 
-                <div class="dashboard-grid">
+                <div class="dashboard-grid" style="margin-bottom: 24px;">
                     <div class="timetable-card">
                         <div class="card-header">
                             <h3>Today's Classes</h3>
                             <span class="date">Monday, Oct 24</span>
                         </div>
-                        
+
                         <div class="timeline">
                             <div class="timeline-item active-lecture">
                                 <div class="time">10:30 AM</div>
                                 <div class="class-info">
                                     <div class="class-header">
                                         <h4>Machine Learning (3rd Year)</h4>
-                                        <span class="live-badge"><i class="fa-solid fa-circle fa-fade"></i> Ongoing</span>
+                                        <span class="live-badge"><i class="fa-solid fa-circle fa-fade"></i>
+                                            Ongoing</span>
                                     </div>
                                     <p><i class="fa-solid fa-location-dot"></i> Room 402 &bull; 45 Students</p>
                                     <div style="margin-top: 12px;">
-                                        <button class="btn btn-primary" onclick="document.querySelector('[data-target=\'attendance-section\']').click()" style="padding: 8px 16px; font-size: 13px;">Mark Attendance</button>
+                                        <button class="btn btn-primary"
+                                            onclick="document.querySelector('[data-target=\'attendance-section\']').click()"
+                                            style="padding: 8px 16px; font-size: 13px;">Mark Attendance</button>
                                     </div>
                                 </div>
                             </div>
@@ -134,63 +143,82 @@
                         <div class="card-header">
                             <h3>Quick Actions</h3>
                         </div>
-                        
-                        <div class="notice-list">
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="uploadModal">
-                                <div class="date-badge" style="background: #e0eafc; color: #008080;">
-                                    <i class="fa-solid fa-cloud-arrow-up" style="font-size: 24px;"></i>
+
+                        <div class="quick-action-grid">
+                            <div class="quick-action-card" style="cursor: pointer;" data-modal-target="uploadModal">
+                                <div class="quick-action-icon" style="background: #e0eafc; color: #008080;">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
                                 </div>
-                                <div class="notice-content">
-                                    <h4>Upload Study Materials</h4>
-                                    <p>Share notes, PDFs, and links with your enrolled students.</p>
-                                </div>
-                            </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="marksModal">
-                                <div class="date-badge" style="background: #e0eafc; color: #008080;">
-                                    <i class="fa-solid fa-pen-to-square" style="font-size: 24px;"></i>
-                                </div>
-                                <div class="notice-content">
-                                    <h4>Post Exam Marks</h4>
-                                    <p>Grade recent exams and publish results for your classes.</p>
+                                <div class="quick-action-title">
+                                    <h4>Upload Materials</h4>
                                 </div>
                             </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="examModal">
-                                <div class="date-badge" style="background: #fef9c3; color: #854d0e;">
-                                    <i class="fa-solid fa-calendar-plus" style="font-size: 24px;"></i>
+                            <div class="quick-action-card" style="cursor: pointer;" data-modal-target="marksModal">
+                                <div class="quick-action-icon" style="background: #e0eafc; color: #008080;">
+                                    <i class="fa-solid fa-pen-to-square"></i>
                                 </div>
-                                <div class="notice-content">
-                                    <h4>Schedule an Exam</h4>
-                                    <p>Set up mid-terms or quizzes for your subjects.</p>
-                                </div>
-                            </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="progressReportModal">
-                                <div class="date-badge" style="background: #dcfce7; color: #166534;">
-                                    <i class="fa-solid fa-chart-line" style="font-size: 24px;"></i>
-                                </div>
-                                <div class="notice-content">
-                                    <h4>Generate Progress Report</h4>
-                                    <p>Download PDF/Excel reports of attendance and marks.</p>
+                                <div class="quick-action-title">
+                                    <h4>Post Marks</h4>
                                 </div>
                             </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="messageClassModal">
-                                <div class="date-badge" style="background: #e0eafc; color: var(--primary);">
-                                    <i class="fa-solid fa-paper-plane" style="font-size: 24px;"></i>
+
+                            <div class="quick-action-card" style="cursor: pointer;"
+                                data-modal-target="progressReportModal">
+                                <div class="quick-action-icon" style="background: #dcfce7; color: #166534;">
+                                    <i class="fa-solid fa-chart-line"></i>
                                 </div>
-                                <div class="notice-content">
-                                    <h4>Message Class</h4>
-                                    <p>Send an email or SMS blast to all enrolled students.</p>
+                                <div class="quick-action-title">
+                                    <h4>Progress Report</h4>
                                 </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notice Board Card -->
+                <div class="notice-board-card">
+                    <div class="card-header">
+                        <h3>Notice Board</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+
+                    <div class="notice-list">
+                        <div class="notice-item">
+                            <div class="date-badge">
+                                <span class="month">Oct</span>
+                                <span class="day">24</span>
+                            </div>
+                            <div class="notice-content">
+                                <h4>Mid-Semester Examination Schedule Released</h4>
+                                <p>The timetable for the upcoming mid-semester examinations for B.Tech students has
+                                    been published. Please check the examination portal.</p>
+                            </div>
+                        </div>
+                        <div class="notice-item">
+                            <div class="date-badge">
+                                <span class="month">Oct</span>
+                                <span class="day">22</span>
+                            </div>
+                            <div class="notice-content">
+                                <h4>Tech Symposium 2024 - Call for Papers</h4>
+                                <p>Submit your research papers for the annual Computer Science symposium by November
+                                    5th.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- SECTION: Classes & Students -->
             <div id="classes-section" class="content-section">
                 <div class="table-container">
-                    <div class="card-header" style="padding: 24px; padding-bottom: 16px;">
+                    <div class="card-header"
+                        style="padding: 24px; padding-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
                         <h3>Enrolled Students: Machine Learning (3rd Year)</h3>
+                        <button class="btn btn-primary" data-modal-target="addStudentModal" style="width: auto;">+
+                            Enroll Student</button>
                     </div>
                     <table class="data-table">
                         <thead>
@@ -199,6 +227,7 @@
                                 <th>Student Name</th>
                                 <th>Email</th>
                                 <th>Overall Attendance</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -207,12 +236,24 @@
                                 <td>Alice Johnson</td>
                                 <td>alice@edutech.edu</td>
                                 <td>92%</td>
+                                <td>
+                                    <button class="btn btn-secondary"
+                                        style="padding: 4px 8px; font-size: 12px; color: #ef4444; border-color: #fca5a5;"
+                                        onclick="this.closest('tr').remove(); alert('Student removed successfully!')"><i
+                                            class="fa-solid fa-trash"></i> Remove</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>24-02</td>
                                 <td>Bob Smith</td>
                                 <td>bob@edutech.edu</td>
                                 <td>78%</td>
+                                <td>
+                                    <button class="btn btn-secondary"
+                                        style="padding: 4px 8px; font-size: 12px; color: #ef4444; border-color: #fca5a5;"
+                                        onclick="this.closest('tr').remove(); alert('Student removed successfully!')"><i
+                                            class="fa-solid fa-trash"></i> Remove</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -221,10 +262,49 @@
 
             <!-- SECTION: Mark Attendance -->
             <div id="attendance-section" class="content-section">
-                <div class="table-container">
-                    <div class="card-header" style="padding: 24px; padding-bottom: 16px; display: flex; justify-content: space-between;">
-                        <h3>Mark Attendance: Machine Learning</h3>
-                        <input type="date" class="form-input" style="width: auto;" value="2024-10-24">
+                <!-- Step 1: Select Class -->
+                <div class="table-container" id="attendance-select-step"
+                    style="margin-bottom: 24px; max-width: 600px; margin: 0 auto;">
+                    <div class="card-header" style="padding: 24px;">
+                        <h3>Select Class for Attendance</h3>
+                    </div>
+                    <div style="padding: 0 24px 24px 24px;">
+                        <form id="attendance-select-form">
+                            <div class="form-group" style="margin-bottom: 16px;">
+                                <label
+                                    style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-main);">Select
+                                    Class</label>
+                                <select class="form-select" id="attendance-class-select" required
+                                    style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--card-bg); color: var(--text-main);">
+                                    <option value="" disabled selected>-- Select a Class --</option>
+                                    <option value="Machine Learning (3rd Year)">Machine Learning (3rd Year)</option>
+                                    <option value="Data Science Lab (4th Year)">Data Science Lab (4th Year)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 24px;">
+                                <label
+                                    style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-main);">Date</label>
+                                <input type="date" class="form-input" id="attendance-date-select" value="2024-10-24"
+                                    required
+                                    style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--card-bg); color: var(--text-main);">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="proceedToMarkAttendance()"
+                                style="width: 100%;">Proceed</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 2: Mark Attendance Table (Hidden Initially) -->
+                <div class="table-container" id="attendance-mark-step" style="display: none;">
+                    <div class="card-header"
+                        style="padding: 24px; padding-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 id="attendance-table-title">Mark Attendance</h3>
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                            <span id="attendance-date-display"
+                                style="color: var(--text-muted); font-weight: 500;"></span>
+                            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 13px;"
+                                onclick="backToAttendanceSelect()">Change Class</button>
+                        </div>
                     </div>
                     <table class="data-table">
                         <thead>
@@ -330,44 +410,7 @@
         </div>
     </div>
 
-    <!-- Schedule Exam Modal -->
-    <div class="modal-overlay" id="examModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Schedule an Exam</h3>
-                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label>Select Class</label>
-                        <select class="form-select">
-                            <option>Machine Learning (3rd Year)</option>
-                            <option>Data Science Lab (4th Year)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Exam Title</label>
-                        <input type="text" class="form-input" placeholder="e.g. Mid-Term Examination" required>
-                    </div>
-                    <div class="form-group" style="display: flex; gap: 16px;">
-                        <div style="flex: 1;">
-                            <label>Date</label>
-                            <input type="date" class="form-input" required>
-                        </div>
-                        <div style="flex: 1;">
-                            <label>Total Marks</label>
-                            <input type="number" class="form-input" placeholder="100" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
-                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Schedule</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Generate Progress Report Modal -->
     <div class="modal-overlay" id="progressReportModal">
@@ -409,41 +452,47 @@
         </div>
     </div>
 
-    <!-- Message Class Modal -->
-    <div class="modal-overlay" id="messageClassModal">
+
+
+    <!-- Add Student Modal -->
+    <div class="modal-overlay" id="addStudentModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Message Class</h3>
+                <h3>Enroll New Student</h3>
                 <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label>Select Class</label>
-                        <select class="form-select">
-                            <option>Machine Learning (3rd Year)</option>
-                            <option>Data Science Lab (4th Year)</option>
-                        </select>
+                        <label>Full Name</label>
+                        <input type="text" class="form-input" placeholder="e.g. Jane Smith" required>
                     </div>
                     <div class="form-group">
-                        <label>Subject / Title</label>
-                        <input type="text" class="form-input" placeholder="e.g. Class Rescheduled" required>
+                        <label>Email Address</label>
+                        <input type="email" class="form-input" placeholder="e.g. jane.smith@edutech.edu" required>
                     </div>
-                    <div class="form-group">
-                        <label>Message Content</label>
-                        <textarea class="form-textarea" placeholder="Type your message here..." required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label style="display: flex; align-items: center; gap: 8px;">
-                            <input type="checkbox" checked> Send via Email
-                        </label>
-                        <label style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
-                            <input type="checkbox"> Send via SMS
-                        </label>
+                    <div class="form-group" style="display: flex; gap: 16px;">
+                        <div style="flex: 1;">
+                            <label>Year</label>
+                            <select class="form-select">
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Section</label>
+                            <select class="form-select">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
                         <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary">Enroll Student</button>
                     </div>
                 </form>
             </div>
@@ -452,4 +501,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

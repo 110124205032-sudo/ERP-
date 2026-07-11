@@ -40,12 +40,7 @@
                         <span>Teacher Directory</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-item" data-target="faculty-attendance-section">
-                        <i class="fa-solid fa-list-check"></i>
-                        <span>Faculty Attendance</span>
-                    </a>
-                </li>
+
                 <li>
                     <a href="#" class="nav-item" data-target="notice-section">
                         <i class="fa-solid fa-bullhorn"></i>
@@ -110,10 +105,7 @@
                         </div>
                         
                         <div class="timeline" style="padding: 16px;">
-                            <div class="stat-card-clickable" data-modal-target="facultyPresentModal" style="background: var(--bg-main); padding: 16px; border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border-color);">
-                                <h4 style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">Total Teachers Present Today</h4>
-                                <span style="color: #22c55e; font-size: 24px; font-weight: 700;">42 / 45</span>
-                            </div>
+
                             <div class="stat-card-clickable" data-modal-target="studentsPresentModal" style="background: var(--bg-main); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
                                 <h4 style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">Total Students Present Today</h4>
                                 <span style="color: #22c55e; font-size: 24px; font-weight: 700;">180 / 200</span>
@@ -126,50 +118,37 @@
                             <h3>Quick Actions</h3>
                         </div>
                         
-                        <div class="notice-list">
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="noticeModal">
-                                <div class="date-badge" style="background: #e0eafc; color: #008080;">
-                                    <i class="fa-solid fa-bullhorn" style="font-size: 24px;"></i>
+                        <div class="quick-action-grid">
+                            <div class="quick-action-card" style="cursor: pointer;" data-modal-target="noticeModal">
+                                <div class="quick-action-icon" style="background: #e0eafc; color: #008080;">
+                                    <i class="fa-solid fa-bullhorn"></i>
                                 </div>
-                                <div class="notice-content">
-                                    <h4>Publish a Notice</h4>
-                                    <p>Broadcast announcements to all teachers and students in the department.</p>
-                                </div>
-                            </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="addTeacherModal">
-                                <div class="date-badge" style="background: #dcfce7; color: #166534;">
-                                    <i class="fa-solid fa-user-plus" style="font-size: 24px;"></i>
-                                </div>
-                                <div class="notice-content">
-                                    <h4>Add New Teacher</h4>
-                                    <p>Onboard a new faculty member to the system.</p>
+                                <div class="quick-action-title">
+                                    <h4>Publish Notice</h4>
                                 </div>
                             </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="addStudentModal">
-                                <div class="date-badge" style="background: #fef9c3; color: #854d0e;">
-                                    <i class="fa-solid fa-user-graduate" style="font-size: 24px;"></i>
+                            <div class="quick-action-card" style="cursor: pointer;" data-modal-target="addTeacherModal">
+                                <div class="quick-action-icon" style="background: #dcfce7; color: #166534;">
+                                    <i class="fa-solid fa-user-plus"></i>
                                 </div>
-                                <div class="notice-content">
-                                    <h4>Enroll New Student</h4>
-                                    <p>Register a new student into the department.</p>
-                                </div>
-                            </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="deptReportModal">
-                                <div class="date-badge" style="background: #dcfce7; color: #166534;">
-                                    <i class="fa-solid fa-file-invoice" style="font-size: 24px;"></i>
-                                </div>
-                                <div class="notice-content">
-                                    <h4>Generate Department Report</h4>
-                                    <p>Export overall performance, attendance, and metrics.</p>
+                                <div class="quick-action-title">
+                                    <h4>Add Teacher</h4>
                                 </div>
                             </div>
-                            <div class="notice-item" style="cursor: pointer;" data-modal-target="assignTeacherModal">
-                                <div class="date-badge" style="background: #e0eafc; color: var(--primary);">
-                                    <i class="fa-solid fa-chalkboard-user" style="font-size: 24px;"></i>
+                            <div class="quick-action-card" style="cursor: pointer;" data-modal-target="deptReportModal">
+                                <div class="quick-action-icon" style="background: #dcfce7; color: #166534;">
+                                    <i class="fa-solid fa-file-invoice"></i>
                                 </div>
-                                <div class="notice-content">
-                                    <h4>Assign Teacher to Class</h4>
-                                    <p>Link a faculty member to a specific subject/class.</p>
+                                <div class="quick-action-title">
+                                    <h4>Generate Report</h4>
+                                </div>
+                            </div>
+                            <div class="quick-action-card" style="cursor: pointer;" data-modal-target="assignTeacherModal">
+                                <div class="quick-action-icon" style="background: #e0eafc; color: var(--primary);">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <div class="quick-action-title">
+                                    <h4>Assign Teacher</h4>
                                 </div>
                             </div>
                         </div>
@@ -267,43 +246,6 @@
                 </div>
             </div>
 
-            <!-- SECTION: Faculty Attendance -->
-            <div id="faculty-attendance-section" class="content-section">
-                <div class="table-container">
-                    <div class="card-header" style="padding: 24px; padding-bottom: 16px; display: flex; justify-content: space-between;">
-                        <h3>Today's Faculty Attendance</h3>
-                        <input type="date" class="form-input" style="width: auto;" value="2024-10-24">
-                    </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Faculty ID</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>T-8204</td>
-                                <td>Dr. Sarah Jenkins</td>
-                                <td><span class="status-badge status-present">Present</span></td>
-                                <td>
-                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 12px;">Edit</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>T-8205</td>
-                                <td>Prof. John Smith</td>
-                                <td><span class="status-badge status-absent">Absent (Leave)</span></td>
-                                <td>
-                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 12px;">Edit</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
 
             <!-- SECTION: Notice Board -->
             <div id="notice-section" class="content-section">
@@ -408,50 +350,7 @@
         </div>
     </div>
 
-    <!-- Add Student Modal -->
-    <div class="modal-overlay" id="addStudentModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Enroll New Student</h3>
-                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" class="form-input" placeholder="e.g. Jane Smith" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" class="form-input" placeholder="e.g. jane.smith@edutech.edu" required>
-                    </div>
-                    <div class="form-group" style="display: flex; gap: 16px;">
-                        <div style="flex: 1;">
-                            <label>Year</label>
-                            <select class="form-select">
-                                <option>1st Year</option>
-                                <option>2nd Year</option>
-                                <option>3rd Year</option>
-                                <option>4th Year</option>
-                            </select>
-                        </div>
-                        <div style="flex: 1;">
-                            <label>Section</label>
-                            <select class="form-select">
-                                <option>A</option>
-                                <option>B</option>
-                                <option>C</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="padding: 16px 0 0 0; background: none;">
-                        <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Enroll Student</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Generate Department Report Modal -->
     <div class="modal-overlay" id="deptReportModal">
@@ -556,29 +455,7 @@
         </div>
     </div>
 
-    <!-- Faculty Present Modal -->
-    <div class="modal-overlay" id="facultyPresentModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Faculty Attendance Overview</h3>
-                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
-                <div class="attendance-list-section">
-                    <h4 class="present-header"><i class="fa-solid fa-check-circle"></i> Present Faculty</h4>
-                    <ul class="attendance-list" id="presentFacultyList">
-                        <!-- Populated dynamically -->
-                    </ul>
-                </div>
-                <div class="attendance-list-section">
-                    <h4 class="absent-header"><i class="fa-solid fa-times-circle"></i> Absent Faculty</h4>
-                    <ul class="attendance-list" id="absentFacultyList">
-                        <!-- Populated dynamically -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script src="script.js"></script>
 </body>

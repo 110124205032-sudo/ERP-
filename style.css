@@ -1,8 +1,11 @@
 :root {
-    --primary: #0078D4; /* Enterprise Blue */
+    --primary: #0078D4;
+    /* Enterprise Blue */
     --primary-hover: #005A9E;
-    --bg-gradient-1: #f3f2f1; /* Fluent Gray */
-    --bg-gradient-2: #fafafa; /* Off-white */
+    --bg-gradient-1: #f3f2f1;
+    /* Fluent Gray */
+    --bg-gradient-2: #fafafa;
+    /* Off-white */
     --card-bg: #ffffff;
     --text-main: #201f1e;
     --text-muted: #605e5c;
@@ -218,7 +221,7 @@ body {
     .login-card {
         padding: 30px 20px;
     }
-    
+
     .role-btn span {
         font-size: 11px;
     }
@@ -324,7 +327,8 @@ body {
     gap: 12px;
     padding: 14px 16px;
     border-radius: 10px;
-    color: #ef4444; /* Subtle red for logout */
+    color: #ef4444;
+    /* Subtle red for logout */
     text-decoration: none;
     font-weight: 500;
     font-size: 15px;
@@ -428,10 +432,11 @@ body {
 
 .passport-photo {
     width: 100px;
-    height: 125px; /* Passport aspect ratio */
+    height: 125px;
+    /* Passport aspect ratio */
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
 }
 
@@ -743,6 +748,59 @@ body {
     gap: 16px;
 }
 
+/* Quick Actions Grid */
+.quick-action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .quick-action-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.quick-action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--input-bg);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    text-align: center;
+    gap: 12px;
+}
+
+.quick-action-card:hover {
+    background: #fff;
+    border-color: var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.quick-action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+}
+
+.quick-action-icon i {
+    font-size: 28px;
+}
+
+.quick-action-title h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
 .notice-item {
     display: flex;
     gap: 20px;
@@ -882,7 +940,8 @@ body {
 .split-layout {
     flex: 1;
     display: flex;
-    background: none; /* override dashboard-container background */
+    background: none;
+    /* override dashboard-container background */
 }
 
 /* HOD Main Content Grid */
@@ -1041,12 +1100,12 @@ body {
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .profile-card-horizontal {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .attendance-ring-container {
         align-self: center;
         margin-top: 10px;
@@ -1057,22 +1116,22 @@ body {
     .dashboard-container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
         padding: 20px;
     }
-    
+
     .main-content {
         padding: 20px;
     }
-    
+
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .profile-left {
         flex-direction: column;
         text-align: center;
@@ -1090,8 +1149,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Modals */
@@ -1121,7 +1187,7 @@ body {
     width: 100%;
     max-width: 500px;
     border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -1175,7 +1241,9 @@ body {
     color: var(--text-main);
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid var(--border-color);
@@ -1186,7 +1254,9 @@ body {
     transition: all 0.2s;
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
@@ -1226,7 +1296,7 @@ body {
 .btn-primary:hover {
     background: var(--primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,128,128,0.2);
+    box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
 }
 
 .btn-secondary {
@@ -1242,7 +1312,7 @@ body {
 .table-container {
     background: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     overflow-x: auto;
     width: 100%;
 }
@@ -1252,7 +1322,8 @@ body {
     border-collapse: collapse;
 }
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
     padding: 16px;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
@@ -1286,9 +1357,20 @@ body {
     font-weight: 600;
 }
 
-.status-present { background: #dcfce7; color: #166534; }
-.status-absent { background: #fee2e2; color: #991b1b; }
-.status-late { background: #fef9c3; color: #854d0e; }
+.status-present {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-absent {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-late {
+    background: #fef9c3;
+    color: #854d0e;
+}
 
 /* Responsive adjustments */
 .mobile-menu-btn {
@@ -1301,7 +1383,9 @@ body {
 }
 
 @media (max-width: 900px) {
-    .dashboard-grid, .hod-top-row {
+
+    .dashboard-grid,
+    .hod-top-row {
         grid-template-columns: 1fr;
     }
 }
@@ -1310,7 +1394,7 @@ body {
     .dashboard-container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         position: fixed;
         left: -300px;
@@ -1318,38 +1402,38 @@ body {
         bottom: 0;
         z-index: 100;
         transition: left 0.3s ease;
-        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .sidebar.open {
         left: 0;
     }
-    
+
     .mobile-menu-btn {
         display: block;
         margin-right: 16px;
     }
-    
+
     .topbar {
         justify-content: flex-start;
         position: relative;
     }
-    
+
     .topbar h1 {
         font-size: 18px;
         flex: 1;
     }
-    
+
     .profile-card-horizontal {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
-    
+
     .profile-left {
         flex-direction: column;
     }
-    
+
     .academic-row {
         justify-content: center;
     }
@@ -1357,6 +1441,7 @@ body {
 
 /* Final Mobile Polish & Bug Fixes */
 @media (max-width: 768px) {
+
     /* Fix sidebar taking 100% width on mobile due to previous media query */
     .sidebar {
         width: 280px !important;
@@ -1364,20 +1449,20 @@ body {
         border-bottom: none !important;
         background: var(--card-bg) !important;
     }
-    
+
     /* Fix HOD global navbar overflowing on mobile */
     .search-container {
         display: none !important;
     }
-    
+
     .nav-user-name {
         display: none !important;
     }
-    
+
     .navbar-left h3 {
         font-size: 16px;
     }
-    
+
     .global-navbar {
         padding: 12px 16px;
     }
@@ -1396,6 +1481,7 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
+
 .robust-photo {
     width: 90px;
     height: 90px;
@@ -1404,6 +1490,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
+
 .robust-details {
     flex: 1;
     min-width: 0;
@@ -1411,6 +1498,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .robust-row-1 {
     display: flex;
     justify-content: space-between;
@@ -1419,6 +1507,7 @@ body {
     gap: 16px;
     flex-wrap: wrap;
 }
+
 .robust-name {
     font-size: 22px;
     font-weight: 600;
@@ -1429,6 +1518,7 @@ body {
     text-overflow: ellipsis;
     max-width: 100%;
 }
+
 .robust-att-badge {
     background: #eff6fc;
     padding: 6px 12px;
@@ -1440,6 +1530,7 @@ body {
     white-space: nowrap;
     flex-shrink: 0;
 }
+
 .robust-row-2 {
     margin-bottom: 6px;
     font-size: 14px;
@@ -1449,6 +1540,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .robust-row-3 {
     font-size: 14px;
     font-weight: 500;
@@ -1457,24 +1549,30 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 @media (max-width: 600px) {
     .robust-profile-card {
         padding: 16px;
         gap: 16px;
         align-items: flex-start;
     }
+
     .robust-photo {
         width: 60px;
         height: 60px;
     }
+
     .robust-name {
         font-size: 18px;
     }
+
     .robust-att-badge {
         font-size: 12px;
         padding: 4px 8px;
     }
-    .robust-row-2, .robust-row-3 {
+
+    .robust-row-2,
+    .robust-row-3 {
         font-size: 13px;
         white-space: normal;
     }
@@ -1484,9 +1582,11 @@ body {
 .attendance-list-section {
     margin-bottom: 24px;
 }
+
 .attendance-list-section:last-child {
     margin-bottom: 0;
 }
+
 .attendance-list-section h4 {
     font-size: 14px;
     font-weight: 600;
@@ -1495,14 +1595,22 @@ body {
     align-items: center;
     gap: 8px;
 }
-.attendance-list-section h4.present-header { color: #16a34a; }
-.attendance-list-section h4.absent-header { color: #dc2626; }
+
+.attendance-list-section h4.present-header {
+    color: #16a34a;
+}
+
+.attendance-list-section h4.absent-header {
+    color: #dc2626;
+}
+
 .attendance-list {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 .attendance-list li {
     display: flex;
     justify-content: space-between;
@@ -1513,28 +1621,44 @@ body {
     font-size: 14px;
     transition: background 0.2s;
 }
+
 .attendance-list li:hover {
     background: #e5e5e5;
 }
-.attendance-list .student-info, .attendance-list .faculty-info {
+
+.attendance-list .student-info,
+.attendance-list .faculty-info {
     display: flex;
     align-items: center;
     gap: 12px;
     font-weight: 500;
     color: var(--text-main);
 }
-.attendance-list .icon-present { color: #16a34a; font-weight: bold; font-size: 16px; }
-.attendance-list .icon-absent { color: #dc2626; font-weight: bold; font-size: 16px; }
+
+.attendance-list .icon-present {
+    color: #16a34a;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.attendance-list .icon-absent {
+    color: #dc2626;
+    font-weight: bold;
+    font-size: 16px;
+}
+
 .attendance-list .meta-info {
     color: var(--text-muted);
     font-size: 13px;
     display: flex;
     gap: 16px;
 }
+
 .stat-card-clickable {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .stat-card-clickable:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
